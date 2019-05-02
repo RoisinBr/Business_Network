@@ -1,0 +1,74 @@
+@font-face {
+    font-family: Futura;
+    src: url("fonts/futura-medium-condensed-bt.ttf");
+}
+
+body {
+    font-family: Futura;
+}
+
+.container {
+    display: flex;
+}
+
+.sub-container {
+    width: 100%;
+}
+
+.row-one {
+    display: flex;
+}
+
+.row-two {
+    display: flex;
+    justify-content: space-evenly
+    /* justify-content: end; Not working */
+}
+
+.nav-visible {
+    display: block;
+    height: 50%;
+}
+
+.nav-login {
+    display: block;
+    height: 50%;
+    /* text-align: right; Not working */
+}
+
+nav {
+    height: 105px;
+}
+
+.guest-speaker {
+    text-align: center;
+    width: 80%;
+}
+
+.introduction {
+    width: 80%;
+    margin: auto;
+}
+
+nav img {
+    width: 230px;
+}
+
+.navigation-tiles {
+    background-color: #87bee8;
+}
+
+.tile-row {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.tile-row div {
+    width: 345px;
+    height: 260px;
+    border: 1px solid black;
+}
+
+input {
+    display: block;
+}
