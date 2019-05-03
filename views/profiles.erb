@@ -1,8 +1,8 @@
 <% @profiles.each do |profile| %>
     <div class="profile">
-    <img class="profile_image" src="media/headshot.png" alt="Profile Picture">
-    <p><a href="/profiles/<%=profile.id%>"><%= profile.first_name %> <%= profile.surname%> </a></p>
-    <p><%= profile.organisation%></p>
+        <img class="profile_image" src="<%=profile.profile_picture%>" alt="Profile Picture">
+        <p><a href="/profiles/<%=profile.id%>"><%= profile.first_name %> <%= profile.surname%> </a></p>
+        <p><%= profile.organisation%></p>
     </div>
 <% end %>
 

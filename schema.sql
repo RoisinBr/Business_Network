@@ -20,7 +20,8 @@ CREATE TABLE profiles (
     organisation_bio text,
     profile_picture text,
     logo TEXT,
-    user_id INTEGER
+    password_digest VARCHAR(500),
+    permission VARCHAR(500)
 );
 
 create table jobs (
@@ -33,7 +34,6 @@ create table jobs (
     your_name VARCHAR(500),
     email VARCHAR(500),
     phone INTEGER,
-    user_id INTEGER,
     profile_id INTEGER
 );
 
@@ -45,7 +45,6 @@ create table job_applications (
     phone INTEGER,
     linkedin_link text,
     resume text,
-    user_id INTEGER,
     profile_id INTEGER,
     job_id INTEGER
 );
@@ -58,7 +57,6 @@ create table member_offers (
     your_name VARCHAR(500),
     email VARCHAR(500),
     phone INTEGER,
-    user_id INTEGER,
     profile_id INTEGER
 );
 
@@ -73,7 +71,6 @@ create table tenders (
     your_name VARCHAR(500),
     email VARCHAR(500),
     phone INTEGER,
-    user_id INTEGER,
     profile_id INTEGER
 );
 
@@ -87,7 +84,6 @@ create table tender_applications (
     time_frame VARCHAR(500),
     email VARCHAR(500),
     phone INTEGER,
-    user_id INTEGER,
     profile_id INTEGER,
     tender_id INTEGER
 );

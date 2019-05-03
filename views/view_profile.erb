@@ -1,4 +1,4 @@
-<img src="/media/headshot.png" alt="Profile Image">
+<img src="<%=@profile.profile_picture.url%>" alt="Profile Image">
 <img src="<%=@profile.logo%>" alt="">
 <h2><%=@profile.first_name%> <%=@profile.surname%></h2>
 <h3><%=@profile.organisation%></h3>
@@ -11,4 +11,8 @@
 <p><%=@profile.bio%></p>
 <p><%=@profile.organisation_bio%></p>
 
-<a href="/profiles/<%params[@profile.id]%>/edit">Update</a>
+<% if current_user.id == @profile.id%>
+    <a href="/profiles/<%=@profile.id%>/edit">Update</a>
+<% end %>
+
+<%# create user record and create profile at the SAME TIME genius %>

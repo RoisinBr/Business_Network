@@ -87,3 +87,7 @@ input {
 footer {
     margin-top: 10%;
 }
+
+.profile {
+    display: flex;
+}
