@@ -24,17 +24,17 @@ CREATE TABLE profiles (
 );
 
 create table jobs (
-  id SERIAL PRIMARY KEY,
-  logo text,
-  organisation VARCHAR(500),
-  job_title VARCHAR(500),
-  job_description text,
-  salary INTEGER,
-  your_name VARCHAR(500),
-  email VARCHAR(500),
-  phone INTEGER,
-  user_id INTEGER,
-  profile_id INTEGER
+    id SERIAL PRIMARY KEY,
+    logo text,
+    organisation VARCHAR(500),
+    job_title VARCHAR(500),
+    job_description text,
+    salary INTEGER,
+    your_name VARCHAR(500),
+    email VARCHAR(500),
+    phone INTEGER,
+    user_id INTEGER,
+    profile_id INTEGER
 );
 
 create table job_applications (
@@ -44,7 +44,7 @@ create table job_applications (
     email VARCHAR(500),
     phone INTEGER,
     linkedin_link text,
-    resume FILE,
+    resume text,
     user_id INTEGER,
     profile_id INTEGER,
     job_id INTEGER
@@ -52,7 +52,7 @@ create table job_applications (
 
 create table member_offers (
     id SERIAL PRIMARY KEY,
-    image FILE,
+    image TEXT,
     offer_title VARCHAR(500),
     offer text,
     your_name VARCHAR(500),
@@ -82,13 +82,12 @@ create table tender_applications (
     first_name VARCHAR(500),
     surname VARCHAR(500),
     organisation VARCHAR(500),
-    tender_application FILE,
+    tender_application TEXT,
     quote INTEGER,
     time_frame VARCHAR(500),
     email VARCHAR(500),
     phone INTEGER,
     user_id INTEGER,
     profile_id INTEGER,
-    tender_id
+    tender_id INTEGER
 );
-

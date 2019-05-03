@@ -8,7 +8,7 @@
 <body>
 
   <section class="container">
-    <img src="media/CIB-logo-230.png" alt="Carlton IN Business Logo">
+    <a href="/"><img src="/media/CIB-logo-230.png" alt="Carlton IN Business Logo"></a>
     <div class="sub-container">
       <nav class="nav-visible">  
         <div class="row-one">
@@ -16,21 +16,32 @@
           <a href="http://">Member Benefits</a>
           <a href="http://">Contact Us</a>
           <a href="http://">News</a>
+          <a href="/login">Login</a>
+          <% if logged_in? %>
+            <form action="/session" method="post">
+              <input type="hidden" name="_method" value="delete">
+              <button>Log Out</button>
+            </form>
+          <% end %>
         </div>
       </nav>
+      <% if logged_in? %>
       <nav class="nav-login">
         <div class="row-two">
           <a href="http://">Events</a>
-          <a href="http://">Network</a>
+          <a href="/profiles">Network</a>
           <a href="http://">Jobs</a>
           <a href="http://">Member Offers</a>
           <a href="http://">Tenders</a>
-          <a href="http://">Login</a>
         </div>
       </nav>
+      <% end %>
     </div>
   </section>
+
   <%= yield %>
+
+
 
 <footer>
   <form action="">
@@ -42,7 +53,7 @@
     <button>Submit</button>
   </form>
 
-  &copy; <p>Carlton IN Business</p> 
+  <p>&copy; Carlton IN Business</p> 
 </footer>
 </body>
 </html>

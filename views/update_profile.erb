@@ -1,0 +1,17 @@
+<form action="/profiles/<%=@profile.id%>" method="post">
+    <input type="hidden" name="_method" value="put">
+    <input type="text" name="first_name" value="<%=@profile.first_name%>">
+    <input type="text" name="surname" value="<%=@profile.surname%>">
+    <input type="text" name="organisation" value="<%=@profile.organisation%>">
+    <input type="text" name="email" value="<%=@profile.email%>">
+    <input type="text" name="phone" value="<%=@profile.phone%>">
+    <input type="text" name="position" value="<%=@profile.position%>">
+    <input type="text" name="industry" value="<%=@profile.industry%>">
+    <input type="text" name="company_address" value="<%=@profile.company_address%>">
+    <input type="text" name="bio" value="<%=@profile.bio%>">
+    <input type="text" name="organisation_bio" value="<%=@profile.organisation_bio%>">
+
+    <button>Update</button>
+    
+</form>
+<%# Updating logo and profile will sort out after load %>
