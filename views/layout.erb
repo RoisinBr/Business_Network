@@ -9,20 +9,20 @@
 </head>
 <body>
 
-  <section class="container">
+  <header class="container">
     <a href="/"><img src="/media/CIB-logo-230.png" alt="Carlton IN Business Logo"></a>
     <div class="sub-container">
       <nav class="nav-visible">  
         <div class="row-one">
-          <a href="http://">Members</a>
-          <a href="http://">Member Benefits</a>
-          <a href="http://">Contact Us</a>
-          <a href="http://">News</a>
-          <a href="/login">Login</a>
+          <a class="nav-link first" href="http://">Members</a>
+          <a class="nav-link" href="http://">Member Benefits</a>
+          <a class="nav-link" href="http://">Contact Us</a>
+          <a class="nav-link" href="http://">News</a>
+          <a class="nav-link" href="/login">Login</a>
           <% if logged_in? %>
             <form action="/session" method="post">
               <input type="hidden" name="_method" value="delete">
-              <button>Log Out</button>
+              <button class="log-out">Log Out</button>
             </form>
           <% end %>
         </div>
@@ -30,28 +30,25 @@
       <% if logged_in? %>
       <nav class="nav-login">
         <div class="row-two">
-          <a href="http://">Events</a>
-          <a href="/profiles">Network</a>
-          <a href="http://">Jobs</a>
-          <a href="http://">Member Offers</a>
-          <a href="http://">Tenders</a>
+          <a class="nav-link first" href="http://">Events</a>
+          <a class="nav-link" href="/profiles">Network</a>
+          <a class="nav-link" href="http://">Jobs</a>
+          <a class="nav-link" href="http://">Member Offers</a>
+          <a class="nav-link" href="http://">Tenders</a>
         </div>
       </nav>
       <% end %>
     </div>
-  </section>
+  </header>
 
   <%= yield %>
 
-
-
 <footer>
   <form action="">
-    <input type="text" placeholder="First Name">
-    <input type="text" placeholder="Surname">
-    <input type="text" placeholder="Phone Number">
-    <input type="text" placeholder="Email">
-    <input type="text" placeholder="Enquiry">
+    <input class="first-name" type="text" placeholder="First Name"> <input class="surname" type="text" placeholder="Surname">
+    <input class="phone" type="text" placeholder="Phone Number">
+    <input class="email"type="text" placeholder="Email">
+    <input class="enquiry" type="text" placeholder="Enquiry">
     <button>Submit</button>
   </form>
 
