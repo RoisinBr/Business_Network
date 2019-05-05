@@ -19,6 +19,24 @@ textarea {
     margin-bottom: 10px;
 }
 
+.button-look {
+    margin: 10px;
+    margin-left: 0;
+    padding: 10px;
+    border: none;
+    font-size: 1.25em;
+    color: white;
+    text-decoration: none;
+    font-family: Futura;
+    background: #87bee8;
+}
+
+.button-look:hover {
+    background-color: rgba(135, 190, 232, 0.5)
+}
+
+/* Navigation */
+
 nav {
     height: 105px;
 }
@@ -91,6 +109,8 @@ nav img {
     background: none;
 }
 
+/* Video */
+
 .parallax {
     height: 600px;
 }
@@ -101,6 +121,8 @@ nav img {
     top: 50;
     z-index: -999;
 }
+
+/* Introduction */
 
 .introduction-section {
     background-color: white;
@@ -125,6 +147,8 @@ nav img {
     margin-bottom: 0;
     padding-bottom: 10px;
 }
+
+/* Homepage Tiles */
 
 .homepage-tiles {
     background-color: #87bee8;
@@ -163,6 +187,8 @@ nav img {
     text-transform: uppercase;
 }
 
+/* Member Logos */
+
 .members {
     background-color: white;
     padding-left: 10px;
@@ -177,6 +203,8 @@ nav img {
     margin: 0;
     padding-bottom: 10px;
 }
+
+/* Footer */
 
 footer {
     background-color: #87bee8;
@@ -261,6 +289,7 @@ footer p {
 
 .profile-information {
     padding-left: 20px;
+    margin-bottom: 20px;
 }
 
 .bold {
@@ -293,10 +322,16 @@ footer p {
 
 /* View All Member Offers */
 
+.offer-container {
+    text-align: center;
+    margin: 20px;
+}
+
 .offer-row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
 .offer-row p {
@@ -313,4 +348,38 @@ footer p {
     width: 360px;
     height: 340px;
     margin: 20px 0;
+    padding: 20px;
+}
+
+.center {
+    text-align: center;
+    margin: auto;
+}
+
+.login {
+    text-align: center;
+}
+
+.login-input {
+    margin: auto;
+}
+
+/* Carousel */
+
+.jcarousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.jcarousel ul {
+    width: 900px;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.jcarousel li {
+    float: left;
+    width: 100px;
 }

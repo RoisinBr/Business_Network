@@ -17,7 +17,7 @@
     <p><span class="bold">Company Bio: </span><%=@profile.organisation_bio%></p>
 
     <% if current_user.id == @profile.id%>
-        <a href="/profiles/<%=@profile.id%>/edit">Update</a>
+        <a class="button-look" href="/profiles/<%=@profile.id%>/edit">Update</a>
     <% end %>
     </div>
 

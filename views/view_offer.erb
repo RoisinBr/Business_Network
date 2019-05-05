@@ -12,7 +12,7 @@
     <p><span class="bold">Phone: </span><%=@offer.phone%></p>
 
     <% if current_user.id == @offer.profile_id%>
-        <a href="/member-offers/<%=@offer.id%>/edit">Update</a>
+        <a class="button-look" href="/member-offers/<%=@offer.id%>/edit">Update</a>
     <% end %>
     </div>
 

@@ -1,4 +1,5 @@
 var header = document.querySelector("header");
+var carousel = document.querySelector(".jcarousel")
 
 window.onscroll = function () {
     stickyHeader()
@@ -14,10 +15,10 @@ var stickyHeader = function () {
     }
 }
 
-var carousel = function() {
-    $('.jcarousel').jcarousel({
-        // Configuration goes here
+var runCarousel = function() {
+    carousel.jcarousel({
+        list: '.jcarousel-list'
     });
 };
 
-// replace the $('.jcarousel') with the query selector name
+runCarousel();
