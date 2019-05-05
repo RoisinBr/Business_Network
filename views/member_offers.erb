@@ -1,0 +1,25 @@
+<div>
+    <label for="">Search</label>
+    <input type="text">
+</div>
+
+<div>
+    <a href="/member-offers/new">Add new offer</a>
+</div>
+
+<section>
+    <div class="offer-row">
+        <% @offers.each do |offer| %>
+        <div class="offer">
+            <a href="/member-offers/<%=offer.id%>">
+                <div class="profile-image">
+                    <img class="profile-image" src="<%=offer.image.url%>" alt="Offer Image">
+                </div>
+                <div class="profile-labels">
+                    <p><%=offer.offer_title%></p>
+                </div>     
+            </a>
+        </div>
+        <% end %>
+    </div>
+</section>

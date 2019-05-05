@@ -26,8 +26,7 @@ helpers do
   end
 
 end
-    
-
+  
 get '/' do
   erb :index
 end
@@ -42,7 +41,7 @@ end
 #   profile = Profile.new
 #   profile.user_id = current_user.id
 # end
-#check with dt this may create issues if creating in a cms from the backend.
+
 
 get '/profiles/:id' do
   @profile = Profile.find(params[:id])
@@ -72,6 +71,53 @@ put '/profiles/:id' do
   profile.save
   redirect "/profiles/#{params[:id]}"
 end
+
+get '/member-offers' do
+  redirect '/login' unless logged_in?
+  @offers = MemberOffer.all
+  erb :member_offers
+end
+
+get '/member-offers/new' do
+  erb :new_offer
+end
+
+post '/member-offers' do
+  offer = MemberOffer.new
+  offer.image = params[:image]
+  offer.offer_title = params[:offer_title]
+  offer.offer = params[:offer]
+  offer.your_name = params[:your_name]
+  offer.email = params[:email]
+  offer.phone = params[:phone]
+  offer.profile_id = current_user.id
+  offer.save
+  redirect "/member-offers"
+end
+
+get '/member-offers/:id' do
+  @offer = MemberOffer.find(params[:id])
+  erb :view_offer
+end
+
+get '/member-offers/:id/edit' do
+  @offer = MemberOffer.find(params[:id])
+  redirect '/member-offers' unless current_user.id == @offer.profile_id
+  erb :update_offer
+end
+
+put '/member-offers/:id' do
+  offer = MemberOffer.find(params[:id])
+  offer.offer_title = params[:offer_title]
+  offer.offer = params[:offer]
+  offer.your_name = params[:your_name]
+  offer.email = params[:email]
+  offer.phone = params[:phone]
+  offer.image = params[:image]
+  offer.save
+  redirect "/member-offers/#{params[:id]}"
+end
+
 
 get '/login' do
   erb :login

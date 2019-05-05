@@ -1,0 +1,27 @@
+<div class="profile-container">
+    <div>
+        <img class="profile-image-view" src="<%=@offer.image.url%>" alt="Offer Image">
+    </div>
+    <div class="update-form">
+        <form action="/member-offers/<%=@offer.id%>" method="post" enctype="multipart/form-data" id="offer">
+            <input type="hidden" name="_method" value="put">
+            <label for="">Offer Title: </label>
+            <input class="update-input" type="text" name="offer_title" value="<%=@offer.offer_title%>">
+            <label for="">Offer: </label>
+            <input class="update-input" type="text" name="offer" value="<%=@offer.offer%>">
+            <label for="">Contact Name: </label>
+            <input class="update-input" type="text" name="your_name" value="<%=@offer.your_name%>">
+            <label for="">Email: </label>
+            <input class="update-input" type="text" name="email" value="<%=@offer.email%>">
+            <label for="">Phone: </label>
+            <input class="update-input" type="text" name="phone" value="<%=@offer.phone%>">
+            <%# <textarea name="organisation_bio" form="update" cols="50" rows="7"><%=@profile.organisation_bio</textarea> %>
+            <label for="">Image: </label>
+            <input class="update-input" type="file" name="image" value="<%=@offer.image%>">
+        <button>Update</button>
+        </form>
+    </div>
+</div>
+
+
+
