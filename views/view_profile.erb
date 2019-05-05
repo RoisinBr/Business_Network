@@ -1,18 +1,26 @@
-<img src="<%=@profile.profile_picture.url%>" alt="Profile Image">
-<img src="<%=@profile.logo%>" alt="">
-<h2><%=@profile.first_name%> <%=@profile.surname%></h2>
-<h3><%=@profile.organisation%></h3>
+<div class="profile-container">
+    <div>
+        <img class="profile-image-view" src="<%=@profile.profile_picture.url%>" alt="Profile Image">
+        <img src="<%=@profile.logo.url%>" alt="logo">
+    </div>
 
-<p><%=@profile.email%></p>
-<p><%=@profile.phone%></p>
-<p><%=@profile.position%></p>
-<p><%=@profile.industry%></p>
-<p><%=@profile.company_address%></p>
-<p><%=@profile.bio%></p>
-<p><%=@profile.organisation_bio%></p>
+    <div class="profile-information">
+        <h2><%=@profile.first_name%> <%=@profile.surname%></h2>
+        <h3><%=@profile.organisation%></h3>
 
-<% if current_user.id == @profile.id%>
-    <a href="/profiles/<%=@profile.id%>/edit">Update</a>
-<% end %>
+    <p><span class="bold">Email:</span> <%=@profile.email%></p>
+    <p><span class="bold">Phone: </span><%=@profile.phone%></p>
+    <p><span class="bold">Position: </span><%=@profile.position%></p>
+    <p><span class="bold">Industry: </span><%=@profile.industry%></p>
+    <p><span class="bold">Company Address: </span><%=@profile.company_address%></p>
+    <p><span class="bold">Bio: </span><%=@profile.bio%></p>
+    <p><span class="bold">Company Bio: </span><%=@profile.organisation_bio%></p>
+
+    <% if current_user.id == @profile.id%>
+        <a href="/profiles/<%=@profile.id%>/edit">Update</a>
+    <% end %>
+    </div>
+
+</div>
 
 <%# create user record and create profile at the SAME TIME genius %>

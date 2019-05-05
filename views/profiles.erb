@@ -1,9 +1,19 @@
-<% @profiles.each do |profile| %>
-    <div class="profile">
-        <img class="profile_image" src="<%=profile.profile_picture%>" alt="Profile Picture">
-        <p><a href="/profiles/<%=profile.id%>"><%= profile.first_name %> <%= profile.surname%> </a></p>
-        <p><%= profile.organisation%></p>
+<section class=all-profiles>
+    <div class="profile-row">
+        <% @profiles.each do |profile| %>
+        <div class="profile">
+            <a href="/profiles/<%=profile.id%>">
+                <div class="profile-image">
+                    <img class="profile-image" src="<%=profile.profile_picture%>" alt="Profile Picture">
+                </div>
+                <div class="profile-labels">
+                    <p><%= profile.first_name %> <%= profile.surname%> </p>
+                    <p><%= profile.organisation%></p>
+                </div>
+            </a>
+        </div>
+        <% end %>
     </div>
-<% end %>
+</section>
 
 

@@ -1,35 +1,49 @@
-<form action="/profiles/<%=@profile.id%>" method="post" enctype="multipart/form-data">
-    <input type="hidden" name="_method" value="put">
-    <label for="">First Name:</label>
-    <input type="text" name="first_name" value="<%=@profile.first_name%>">
-    <label for="">Surname: </label>
-    <input type="text" name="surname" value="<%=@profile.surname%>">
-    <label for="">Organisation: </label>
-    <input type="text" name="organisation" value="<%=@profile.organisation%>">
-    <label for="">Email: </label>
-    <input type="text" name="email" value="<%=@profile.email%>">
-    <label for="">Phone: </label>
-    <input type="text" name="phone" value="<%=@profile.phone%>">
-    <label for="">Position: </label>
-    <input type="text" name="position" value="<%=@profile.position%>">
-    <label for="">Industry: </label>
-    <input type="text" name="industry" value="<%=@profile.industry%>">
-    <label for="">Company Address: </label>
-    <input type="text" name="company_address" value="<%=@profile.company_address%>">
-    <label for="">Bio: </label>
-    <input type="text" name="bio" value="<%=@profile.bio%>">
-    <label for="">Organisation Bio:</label>
-    <input type="text" name="organisation_bio" value="<%=@profile.organisation_bio%>">
-    <label for="">Profile Picture: </label>
-    <input type="file" name="profile_picture" value="<%=@profile.profile_picture%>">
-    <label for="">Logo: </label>
-    <input type="file" name="logo" value="<%=@profile.logo%>">
-
-
-
-    <button>Update</button>
-    
-</form>
+<div class="profile-container">
+    <div>
+        <div class="block">
+            <img class="profile-image-view" src="<%=@profile.profile_picture.url%>" alt="Profile Picture">
+        </div>
+        <div class="block">
+            <img src="<%=@profile.logo.url%>" alt="Logo">
+        </div>
+    </div>
+    <div class="update-form">
+        <div class="column-one">
+            <form action="/profiles/<%=@profile.id%>" method="post" enctype="multipart/form-data" id="update">
+                <input type="hidden" name="_method" value="put">
+                <label for="">First Name:</label>
+                <input class="update-input" type="text" name="first_name" value="<%=@profile.first_name%>">
+                <label for="">Surname: </label>
+                <input class="update-input" type="text" name="surname" value="<%=@profile.surname%>">
+                <label for="">Organisation: </label>
+                <input class="update-input" type="text" name="organisation" value="<%=@profile.organisation%>">
+                <label for="">Email: </label>
+                <input class="update-input" type="text" name="email" value="<%=@profile.email%>">
+                <label for="">Phone: </label>
+                <input class="update-input" type="text" name="phone" value="<%=@profile.phone%>">
+        </div>
+        <div class="column-two">
+                <label for="">Position: </label>
+                <input class="update-input" type="text" name="position" value="<%=@profile.position%>">
+                <label for="">Industry: </label>
+                <input class="update-input" type="text" name="industry" value="<%=@profile.industry%>">
+                <label for="">Company Address: </label>
+                <input class="update-input" type="text" name="company_address" value="<%=@profile.company_address%>">
+                <label for="">Bio: </label>
+                <textarea name="bio" form="update" cols="50" rows="7"><%=@profile.bio%></textarea>
+                <label for="">Organisation Bio:</label>
+                <textarea name="organisation_bio" form="update" cols="50" rows="7"><%=@profile.organisation_bio%></textarea>
+        </div>
+        <div class="column-three">
+                <label for="">Profile Picture: </label>
+                <input class="update-input" type="file" name="profile_picture" value="<%=@profile.profile_picture%>">
+                <label for="">Logo: </label>
+                <input class="update-input" type="file" name="logo" value="<%=@profile.logo%>">
+        <button>Update</button>
+        </div>
+    </form>
+    </div>
+</div>
 <%# Updating logo and profile will sort out after load %>
 
 
