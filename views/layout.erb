@@ -18,7 +18,11 @@
           <a class="nav-link" href="http://">Member Benefits</a>
           <a class="nav-link" href="http://">Contact Us</a>
           <a class="nav-link" href="http://">News</a>
-          <a class="nav-link" href="/login">Login</a>
+          <% if logged_in?%>
+          <a class="hidden" href="/login">Login</a>
+          <% else %>
+          <a class="nav-link nav-login" href="/login">Login</a>
+          <% end %>
           <% if logged_in? %>
             <form action="/session" method="post">
               <input type="hidden" name="_method" value="delete">

@@ -31,8 +31,16 @@ textarea {
     background: #87bee8;
 }
 
+.inline {
+    display: inline;
+}
+
 .button-look:hover {
     background-color: rgba(135, 190, 232, 0.5)
+}
+
+.hidden {
+    display: none;
 }
 
 /* Navigation */
@@ -372,7 +380,7 @@ footer p {
 }
 
 .jcarousel ul {
-    width: 900px;
+    width: 10000em;
     position: relative;
     list-style: none;
     margin: 0;
@@ -381,5 +389,4 @@ footer p {
 
 .jcarousel li {
     float: left;
-    width: 100px;
 }

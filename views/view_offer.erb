@@ -12,7 +12,11 @@
     <p><span class="bold">Phone: </span><%=@offer.phone%></p>
 
     <% if current_user.id == @offer.profile_id%>
-        <a class="button-look" href="/member-offers/<%=@offer.id%>/edit">Update</a>
+        <a class="button-look inline" href="/member-offers/<%=@offer.id%>/edit">Update</a>
+        <form class="inline" action="" method="_post">
+        <input type="hidden" name="_method" value="delete">
+        <button class="button-look inline">Delete</button>
+        </form>
     <% end %>
     </div>
 

@@ -1,5 +1,11 @@
 var header = document.querySelector("header");
-var carousel = document.querySelector(".jcarousel")
+var jcarousel = $(".jcarousel").jcarousel({
+    wrap: 'circular'
+});
+jcarousel.jcarouselAutoscroll();
+
+var loginButton = document.querySelector(".login-button")
+var navLoginLink = document.querySelector(".nav-login")
 
 window.onscroll = function () {
     stickyHeader()
@@ -15,10 +21,8 @@ var stickyHeader = function () {
     }
 }
 
-var runCarousel = function() {
-    carousel.jcarousel({
-        list: '.jcarousel-list'
-    });
-};
+// var handleLoginClick = function (event) {
+//     navLoginLink.classList.add("hidden")
+// }
 
-runCarousel();
+// loginButton.addEventListener('click', handleLoginClick)
