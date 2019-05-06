@@ -4,9 +4,6 @@ var jcarousel = $(".jcarousel").jcarousel({
 });
 jcarousel.jcarouselAutoscroll();
 
-var loginButton = document.querySelector(".login-button")
-var navLoginLink = document.querySelector(".nav-login")
-
 window.onscroll = function () {
     stickyHeader()
 };
@@ -21,8 +18,11 @@ var stickyHeader = function () {
     }
 }
 
-// var handleLoginClick = function (event) {
-//     navLoginLink.classList.add("hidden")
-// }
-
-// loginButton.addEventListener('click', handleLoginClick)
+// function myFunction() {
+//     var x = document.getElementById("myTopnav");
+//     if (x.className === "topnav") {
+//       x.className += " responsive";
+//     } else {
+//       x.className = "topnav";
+//     }
+//   }
