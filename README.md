@@ -1,6 +1,13 @@
 # Business Network
 [View the website here.](https://frozen-basin-26237.herokuapp.com/)
 
+## Demo login details
+
+username: john.smith@gmail.com
+password: testing
+
+Then head to Member Offers or Network to see existing features. Other features under development.
+
 
 ## Description
 
