@@ -3,8 +3,8 @@
 
 ## Demo login details
 
-username: john.smith@gmail.com
-password: testing
+username: tim.smith@gmail.com
+password: trees
 
 Then head to Member Offers or Network to see existing features. Other features under development.
 
