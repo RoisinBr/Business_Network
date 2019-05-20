@@ -23,4 +23,5 @@ Create your own tribe.  Add members and allow them to view the members direcrory
 6. Connection Tracking - see who is connecting with who.
 
 ## Resources
-Video by Luis Quintero from Pexels
+Video by Luis Quintero from Pexels.
+All images for educational purposes only.
