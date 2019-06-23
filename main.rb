@@ -28,6 +28,7 @@ helpers do
 end
   
 get '/' do
+  @profiles = Profile.all
   erb :index
 end
 
