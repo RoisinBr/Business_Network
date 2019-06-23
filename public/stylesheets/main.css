@@ -330,6 +330,10 @@ footer p {
     margin-bottom: 20px;
 }
 
+.profile-information h2 {
+    color: black;
+}
+
 .bold {
     font-weight: bold;
 }
