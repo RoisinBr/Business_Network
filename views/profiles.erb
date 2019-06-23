@@ -1,3 +1,5 @@
+<h1 class=subpage-header>Network</h1>
+
 <section class="all-profiles">
     <div class="profile-row">
         <% @profiles.each do |profile| %>
@@ -7,8 +9,8 @@
                     <img class="profile-image" src="<%=profile.profile_picture%>" alt="Profile Picture">
                 </div>
                 <div class="profile-labels">
-                    <p><%= profile.first_name %> <%= profile.surname%> </p>
-                    <p><%= profile.organisation%></p>
+                    <h2><%= profile.first_name %> <%= profile.surname%> </h2>
+                    <h1><%= profile.organisation%></h1>
                 </div>
             </a>
         </div>

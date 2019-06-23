@@ -38,11 +38,14 @@ get '/profiles' do
   erb :profiles
 end
 
-# post '/profiles' do
-#   profile = Profile.new
-#   profile.user_id = current_user.id
-# end
-
+post '/profiles' do
+  @profile = Profile.new
+  # @profile.user_id = current_user.id
+  @profile.password = ENV["zendesk_password"]
+  @profile.save
+  # binding.pry
+  erb :update_profile
+end
 
 get '/profiles/:id' do
   @profile = Profile.find(params[:id])
