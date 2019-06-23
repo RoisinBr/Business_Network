@@ -334,6 +334,10 @@ footer p {
     font-weight: bold;
 }
 
+.profile-logo {
+    width: 100px;
+}
+
 /* Update Profile and Offer */
 
 .update-input {
