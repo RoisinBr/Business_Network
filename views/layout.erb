@@ -49,11 +49,11 @@
   <%= yield %>
 
 <footer>
-  <form action="mailto:roisin.briscoe@gmail.com" method="post" enctype="text/plain">
-    <input class="first-name" type="text" placeholder="First Name"> <input class="surname" type="text" placeholder="Surname">
-    <input class="phone" type="text" placeholder="Phone Number">
-    <input class="email"type="text" placeholder="Email">
-    <input class="enquiry" type="text" placeholder="Enquiry">
+  <form action="https://formspree.io/roisin.briscoe@gmail.com" method="post">
+    <input class="first-name" type="text" name="first-name" placeholder="First Name"> <input class="surname" type="text" placeholder="Surname">
+    <input name="phone" class="phone" type="text" placeholder="Phone Number">
+    <input name="email" class="email"type="text" placeholder="Email">
+    <input name="enquiry" class="enquiry" type="text" placeholder="Enquiry">
     <button class="button-look">Submit</button>
   </form>
 
