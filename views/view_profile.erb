@@ -8,17 +8,17 @@
         <h2><%=@profile.first_name%> <%=@profile.surname%></h2>
         <h3><%=@profile.organisation%></h3>
 
-    <p><span class="bold">Email:</span> <%=@profile.email%></p>
-    <p><span class="bold">Phone: </span><%=@profile.phone%></p>
-    <p><span class="bold">Position: </span><%=@profile.position%></p>
-    <p><span class="bold">Industry: </span><%=@profile.industry%></p>
-    <p><span class="bold">Company Address: </span><%=@profile.company_address%></p>
-    <p><span class="bold">Bio: </span><%=@profile.bio%></p>
-    <p><span class="bold">Company Bio: </span><%=@profile.organisation_bio%></p>
+        <p><span class="bold">Email:</span> <%=@profile.email%></p>
+        <p><span class="bold">Phone: </span><%=@profile.phone%></p>
+        <p><span class="bold">Position: </span><%=@profile.position%></p>
+        <p><span class="bold">Industry: </span><%=@profile.industry%></p>
+        <p><span class="bold">Company Address: </span><%=@profile.company_address%></p>
+        <p><span class="bold">Bio: </span><%=@profile.bio%></p>
+        <p><span class="bold">Company Bio: </span><%=@profile.organisation_bio%></p>
 
-    <% if current_user.id == @profile.id%>
-        <a class="button-look" href="/profiles/<%=@profile.id%>/edit">Update</a>
-    <% end %>
+        <% if current_user.id == @profile.id%>
+            <a class="button-look" href="/profiles/<%=@profile.id%>/edit">Update</a>
+        <% end %>
     </div>
 
 </div>

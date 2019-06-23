@@ -12,27 +12,25 @@ require_relative 'models/member_offer'
 enable :sessions
 
 helpers do
-
   def current_user
     Profile.find_by(id: session[:user_id])
   end
 
   def logged_in?
     if current_user
-      return true
+      true
     else
-      return false
+      false
     end
   end
-
 end
-  
+
 get '/' do
   @profiles = Profile.all
   erb :index
 end
 
-get '/profiles' do 
+get '/profiles' do
   redirect '/login' unless logged_in?
   @profiles = Profile.all
   erb :profiles
@@ -40,7 +38,7 @@ end
 
 post '/profiles' do
   @profile = Profile.new
-  @profile.password = "example"
+  @profile.password = ENV['zendesk_password']
   @profile.save
   erb :update_profile
 end
@@ -94,7 +92,7 @@ post '/member-offers' do
   offer.phone = params[:phone]
   offer.profile_id = current_user.id
   offer.save
-  redirect "/member-offers"
+  redirect '/member-offers'
 end
 
 get '/member-offers/:id' do
@@ -139,8 +137,7 @@ get '/login' do
   erb :login
 end
 
-
-post '/session' do 
+post '/session' do
   user = Profile.find_by(email: params[:email])
   if user && user.authenticate(params[:password])
     session[:user_id] = user.id
@@ -156,6 +153,6 @@ delete '/session' do
 end
 
 get '/admin' do
-  redirect '/' unless current_user.permission == "admin"
+  redirect '/' unless current_user.permission == 'admin'
   erb :admin
 end

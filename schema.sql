@@ -1,11 +1,5 @@
 create DATABASE networking;
 
--- create table users (
---     id SERIAL PRIMARY KEY,
---     email VARCHAR(500),
---     password_digest VARCHAR(500)
--- );
-
 CREATE TABLE profiles (
     id SERIAL PRIMARY KEY,
     first_name VARCHAR(500),
