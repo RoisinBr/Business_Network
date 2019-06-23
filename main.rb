@@ -1,5 +1,5 @@
 require 'sinatra'
-# require 'sinatra/reloader'
+require 'sinatra/reloader' if settings.development?
 require 'pry'
 require_relative 'db_config'
 require_relative 'models/profile'
@@ -118,10 +118,25 @@ put '/member-offers/:id' do
   redirect "/member-offers/#{params[:id]}"
 end
 
+delete '/member-offers/:id' do
+  offer = MemberOffer.find(params[:id])
+  offer.delete
+  redirect '/member-offers'
+end
+
+get '/members' do
+  @users = Profile.all
+  erb :members
+end
+
+get '/member-benefits' do
+  erb :member_benefits
+end
 
 get '/login' do
   erb :login
 end
+
 
 post '/session' do 
   user = Profile.find_by(email: params[:email])

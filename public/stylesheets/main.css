@@ -13,6 +13,10 @@ body {
     margin: 0;
 }
 
+.width900 {
+    width: 900px;
+}
+
 textarea {
     font-family: Futura;
     display: block;
@@ -140,7 +144,7 @@ nav img {
     height: 600px;
 }
 
-.parallax video {
+.parallax iframe {
     min-width: 100%;
     position: fixed;
     top: 50;
@@ -213,7 +217,7 @@ nav img {
     text-transform: uppercase;
 }
 
-/* Member Logos */
+/* Member Logos Homepage */
 
 .members {
     background-color: white;
@@ -407,6 +411,12 @@ footer p {
 
 .jcarousel li {
     float: left;
+}
+
+/* Members Listing */
+
+.member-logo {
+    width: 100px;
 }
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */

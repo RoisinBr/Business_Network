@@ -6,18 +6,17 @@
     <div class="profile-information">
         <h2><%=@offer.offer_title%></h2>
 
-    <p><span class="bold">Offer:</span> <%=@offer.offer%></p>
-    <p><span class="bold">Contact Name:</span> <%=@offer.your_name%></p>
-    <p><span class="bold">Email:</span> <%=@offer.email%></p>
-    <p><span class="bold">Phone: </span><%=@offer.phone%></p>
+        <p><span class="bold">Offer:</span> <%=@offer.offer%></p>
+        <p><span class="bold">Contact Name:</span> <%=@offer.your_name%></p>
+        <p><span class="bold">Email:</span> <%=@offer.email%></p>
+        <p><span class="bold">Phone: </span><%=@offer.phone%></p>
 
-    <% if current_user.id == @offer.profile_id%>
-        <a class="button-look inline" href="/member-offers/<%=@offer.id%>/edit">Update</a>
-        <form class="inline" action="" method="_post">
-        <input type="hidden" name="_method" value="delete">
-        <button class="button-look inline">Delete</button>
-        </form>
-    <% end %>
+        <% if current_user.id == @offer.profile_id%>
+            <a class="button-look inline" href="/member-offers/<%=@offer.id%>/edit">Update</a>
+            <form class="inline" action="/member-offers/<%=@offer.id%>" method="post">
+                <input type="hidden" name="_method" value="delete">
+                <button class="button-look inline">Delete</button>
+            </form>
+        <% end %>
     </div>
-
 </div>
