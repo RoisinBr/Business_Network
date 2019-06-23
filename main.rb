@@ -40,10 +40,8 @@ end
 
 post '/profiles' do
   @profile = Profile.new
-  # @profile.user_id = current_user.id
-  @profile.password = ENV["zendesk_password"]
+  @profile.password = "example"
   @profile.save
-  # binding.pry
   erb :update_profile
 end
 
