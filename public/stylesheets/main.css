@@ -17,6 +17,10 @@ body {
     width: 900px;
 }
 
+.subpage-header {
+    margin-left: 70px;
+}
+
 textarea {
     font-family: Futura;
     display: block;
