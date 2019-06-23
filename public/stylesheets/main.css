@@ -364,7 +364,7 @@ footer p {
     margin-bottom: 30px;
 }
 
-.offer-row p {
+.offer-row h2 {
     margin: 0;
     padding: 5px;
     color: white;
@@ -379,6 +379,10 @@ footer p {
     height: 340px;
     margin: 20px 0;
     padding: 20px;
+}
+
+.offer:hover {
+    opacity: 0.6;
 }
 
 .center {
